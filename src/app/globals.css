@@ -1,0 +1,194 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --background: #faf8f3;
+    --foreground: #1d1d1b;
+    --card-bg: #ffffff;
+    --card-border: #e6e0d2;
+    --muted: #6b685f;
+    --muted-foreground: #545149;
+    --line: #ded8cb;
+
+    --maroon: #8b1a2b;
+    --maroon-dark: #701522;
+    --maroon-light: #fad4d4;
+    --green: #1f4d33;
+    --green-dark: #173b27;
+    --green-light: #d4ecd9;
+    --cream: #faf8f3;
+    --gold: #d9a850;
+    --gold-light: #f8ecc4;
+    --gold-mid: #efd48a;
+    --ink: #1d1d1b;
+
+    --input-bg: #ffffff;
+    --input-border: #d4cec0;
+    --input-focus: #8b1a2b;
+
+    --table-header-bg: #f5efe3;
+    --table-hover-bg: #f8f4ec;
+  }
+
+  .dark,
+  [data-theme="dark"] {
+    --background: #121915;
+    --foreground: #f2ede2;
+    --card-bg: #1a251f;
+    --card-border: #293a2f;
+    --muted: #a3b0a7;
+    --muted-foreground: #8a968e;
+    --line: #2e4135;
+
+    --maroon: #f28b9b;
+    --maroon-dark: #d66577;
+    --maroon-light: #3d1b22;
+    --green: #7dd39c;
+    --green-dark: #276843;
+    --green-light: #183825;
+    --cream: #121915;
+    --gold: #e5b966;
+    --gold-light: #382c16;
+    --gold-mid: #52401f;
+    --ink: #f2ede2;
+
+    --input-bg: #17221b;
+    --input-border: #304437;
+    --input-focus: #f28b9b;
+
+    --table-header-bg: #16201a;
+    --table-hover-bg: #1e2c23;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans-devanagari), system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  padding-left: env(safe-area-inset-left, 0px);
+  padding-right: env(safe-area-inset-right, 0px);
+}
+
+h1, h2, h3, h4, .font-serif-dev {
+  font-family: var(--font-serif-devanagari), Georgia, serif;
+}
+
+/* Accessible tap targets for touch devices without distorting small controls/desktop */
+@media (pointer: coarse) {
+  button:not(.inline-btn):not(.p-1):not(.p-0):not(.p-0\.5),
+  a.btn,
+  input:not([type="checkbox"]):not([type="radio"]),
+  select,
+  textarea {
+    min-height: 44px;
+  }
+}
+
+/* Prevent iOS Safari auto-zoom on mobile while allowing desktop zoom/scaling */
+@media (max-width: 768px) {
+  input:not([type="checkbox"]):not([type="radio"]),
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* Custom Scrollbar that adapts to both light & dark themes */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: var(--table-header-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--muted);
+  border-radius: 4px;
+  opacity: 0.5;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--maroon);
+}
+
+/* Masked hero image transition */
+.hero-image-mask {
+  -webkit-mask-image: linear-gradient(to right, transparent, black 25%);
+  mask-image: linear-gradient(to right, transparent, black 25%);
+}
+
+@media (max-width: 768px) {
+  .hero-image-mask {
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black 25%);
+    mask-image: linear-gradient(to bottom, transparent, black 25%);
+  }
+}
+
+/* Print Stylesheet - Always pure white paper and black print typography */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 5mm;
+  }
+
+  /* Hide headers, footers, navigation and interactive buttons */
+  header,
+  nav,
+  aside,
+  footer,
+  .print\:hidden,
+  [data-print-hidden="true"],
+  button,
+  a {
+    display: none !important;
+  }
+
+  body, html {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    min-height: auto !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  main {
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+  }
+
+  #mandi-invoice-container,
+  #dedicated-pdf-invoice-template {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  #mandi-invoice-container *,
+  #dedicated-pdf-invoice-template * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}

@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="mr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>चव्हाण ट्रेडर्स – Chavan Traders</title>
+<style>
+:root{--g:#1f4d33;--btn:#1f4d33;--m:#8b1a2b;--bg:#faf8f3;--c:#fff;--t:#1d1d1b;--b:#ddd8cc;--mu:#6b685f;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14201a;--c:#1d2b23;--t:#eee9de;--b:#34453b;--m:#e8909e;--g:#8fd6a8;--btn:#2f7a50;--mu:#a9b4ac;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#14201a;--c:#1d2b23;--t:#eee9de;--b:#34453b;--m:#e8909e;--g:#8fd6a8;--btn:#2f7a50;--mu:#a9b4ac;color-scheme:dark}
+*{box-sizing:border-box}html,body{margin:0}
+body{background:var(--bg);color:var(--t);font:16px/1.5 "Noto Sans Devanagari","Segoe UI",system-ui,sans-serif}
+header{position:sticky;top:env(safe-area-inset-top,0px);background:var(--c);border-bottom:1px solid var(--b);z-index:5}
+.in{max-width:1000px;margin:0 auto;padding:10px 14px}
+.brand{font:700 26px/1.1 "Noto Serif Devanagari",Georgia,serif;color:var(--m)}
+nav{display:flex;gap:4px;overflow-x:auto;padding-top:6px}
+nav button{border:0;background:none;color:var(--t);padding:8px 12px;font:inherit;cursor:pointer;border-bottom:3px solid transparent;white-space:nowrap}
+nav button.on{border-color:var(--m);font-weight:600}
+h2{font-family:"Noto Serif Devanagari",Georgia,serif;color:var(--g);margin:.2em 0 .5em}
+.hero{background:linear-gradient(120deg,#f3e3b0,#e9c46a 55%,#b5833a);color:#2a1b12;padding:34px 14px}
+.hero h1{font:700 clamp(34px,8vw,64px)/1.1 "Noto Serif Devanagari",Georgia,serif;color:#7a1224;margin:0}
+.hero p{max-width:34em}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.card{background:var(--c);border:1px solid var(--b);border-radius:8px;padding:14px}
+.prod{font-weight:600;text-align:center;padding:26px 8px;font-size:18px}
+.btn,button.p{background:var(--btn);color:#fff;border:0;border-radius:6px;padding:9px 14px;font:inherit;cursor:pointer;text-decoration:none;display:inline-block}
+button.s{background:none;border:1px solid var(--b);color:var(--t);border-radius:6px;padding:6px 10px;font:inherit;cursor:pointer}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--m);outline-offset:2px}
+label{display:block;font-size:13px;color:var(--mu)}
+input,select,textarea{width:100%;padding:8px;border:1px solid var(--b);border-radius:6px;background:var(--bg);color:var(--t);font:inherit}
+.f{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-bottom:10px}
+.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:6px;margin-bottom:10px}
+.tw{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{padding:7px 8px;border-bottom:1px solid var(--b);text-align:left;white-space:nowrap}
+.k{font:700 24px/1.2 Georgia,serif;color:var(--g)}.neg{color:var(--m)}
+.mu{color:var(--mu);font-size:13px}.bar{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+footer{background:#1f4d33;color:#e9e4d6;padding:14px;text-align:center;margin-top:30px;font-size:14px}
+section{display:none}section.on{display:block}
+
+.brand small{display:block;font:600 11px/1 "Noto Sans Devanagari",system-ui,sans-serif;letter-spacing:.2em;color:var(--g);margin-top:3px}
+nav{align-items:center}nav .btn{padding:7px 12px;margin-left:6px}
+.hz{background:linear-gradient(100deg,#f8ecc4,#efd48a 60%,#d9a850);color:#2a1b12}
+.hzi{display:grid;grid-template-columns:1.1fr 1fr;gap:0;align-items:center;padding:0 14px}
+.hzt{padding:34px 0}.hzt h1{font:700 clamp(40px,7vw,72px)/1.05 "Noto Serif Devanagari",Georgia,serif;color:#7a1224;margin:0}
+.own{font:600 18px "Noto Serif Devanagari",Georgia,serif;margin:8px 0 14px;border-top:1px solid #7a122455;border-bottom:1px solid #7a122455;display:inline-block;padding:4px 14px}
+.hzt p{margin:.4em 0;font-size:17px;max-width:30em}.ct{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}
+.ct a{background:#fff;color:#1d1d1b;border-radius:30px;padding:8px 16px;text-decoration:none;font-weight:600;box-shadow:0 1px 3px #0003}
+.hzimg{width:100%;height:100%;min-height:260px;object-fit:cover;-webkit-mask-image:linear-gradient(to right,transparent,#000 22%);mask-image:linear-gradient(to right,transparent,#000 22%)}
+.sec{max-width:1000px;margin:0 auto;padding:34px 14px 0}.sec h2{text-align:center}
+.pc{padding:0;overflow:hidden;text-align:center}.pc img{width:100%;height:110px;object-fit:cover;display:block}
+.pc div{padding:10px 6px;font-weight:600}.pc small{display:block;color:var(--mu);font-weight:400}
+.g3{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+.tr{display:flex;gap:18px;flex-wrap:wrap;margin-top:14px;font-size:14px;color:var(--g);font-weight:600}
+.lg{max-width:380px;margin:40px auto;padding:0 14px}.err{color:var(--m);min-height:1.4em;font-size:14px}
+@media(max-width:640px){.hzi{grid-template-columns:1fr}.hzimg{min-height:200px;height:220px;-webkit-mask-image:linear-gradient(to bottom,transparent,#000 22%);mask-image:linear-gradient(to bottom,transparent,#000 22%)}}
+input,select,textarea{font-size:16px;min-height:44px}button,.btn{min-height:44px}.btn{display:inline-flex;align-items:center;justify-content:center}.bar .btn,.bar button{flex:1 1 auto}@media(max-width:640px){th,td{padding:8px 6px}.card{padding:12px}}
+#invo{position:fixed;inset:0;background:#0009;z-index:30;overflow:auto;padding:12px}
+.invb{max-width:640px;margin:0 auto 10px;display:flex;gap:8px;flex-wrap:wrap}
+.inv{background:#fff;color:#1d1d1b;max-width:640px;margin:0 auto;border:1px solid #ccc;border-radius:14px;overflow:hidden;font-size:14px;line-height:1.6;font-family:'Noto Sans Devanagari',system-ui,sans-serif}
+.inv .ih{background:#fad4d4;border-bottom:1px solid #eba0a0;text-align:center;padding:18px 12px}
+.inv .ih b{display:block;font-size:34px;line-height:1.4;font-weight:400;color:#9b2230}.inv .ih i{display:block;font-style:normal;font-size:17px;font-weight:600;color:#111;margin:2px 0 6px}
+.inv .ih span{display:block;font-size:13px;color:#555}
+.inv .t1{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:12px 16px}
+.inv .t1 b{font-size:20px;white-space:nowrap}
+.inv .bd{background:#f8dca3;color:#7a4a00;border-radius:999px;padding:3px 14px;white-space:nowrap;font-size:13px}
+.inv .bd.ok{background:#cfe9d6;color:#1f4d33}
+.inv .g2{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #ddd;border-bottom:1px solid #ddd}
+.inv .g2>div{padding:10px 16px}.inv .g2>div+div{border-left:1px solid #ddd}
+.inv .lb{font-size:12px;color:#777}
+.inv .tb{display:grid;grid-template-columns:28px 1fr 64px 52px 78px;gap:4px;padding:8px 16px;align-items:start}
+.inv .tb.h{background:#f6f5f1;font-size:12px;color:#555}
+.inv .tb.rw{border-bottom:1px solid #e5e2da}
+.inv .r{text-align:right}
+.inv .sm{font-size:12px;color:#666;line-height:1.5}
+.inv .tt{padding:10px 16px}
+.inv .tl{display:flex;justify-content:space-between;gap:8px;padding:2px 0;color:#555}
+.inv .tl.big{border-top:1px solid #ccc;margin-top:6px;padding-top:8px;font-size:18px;font-weight:600;color:#1d1d1b}
+.inv .tl.pd{color:#0a6b1e}
+.inv .due{display:flex;justify-content:space-between;background:#f8dca3;color:#7a4a00;border-radius:10px;padding:8px 14px;margin:8px 16px;font-weight:600;font-size:16px}
+.inv .nt{padding:8px 16px;border-top:1px solid #e5e2da;color:#666;font-size:13px}
+.inv .sg{display:flex;justify-content:space-between;padding:34px 16px 10px;font-size:13px;color:#555}
+.inv .sg div{border-top:1px solid #777;padding-top:4px;min-width:34%;text-align:center}
+.inv .ft{background:#f6f5f1;text-align:center;padding:10px;color:#555;font-size:13px}
+#invo{padding-top:calc(12px + env(safe-area-inset-top,0px));padding-bottom:calc(16px + env(safe-area-inset-bottom,0px))}
+@media(max-width:520px){#invo{padding-left:6px;padding-right:6px}#invo .invb button{flex:1 1 45%;min-height:44px}#invo .inv{border-radius:10px;font-size:13px}#invo .inv .ih{padding:14px 8px}#invo .inv .ih b{font-size:28px}#invo .inv .ih i{font-size:15px}#invo .inv .ih span{font-size:12px}#invo .inv .t1{padding:10px 10px}#invo .inv .t1 b{font-size:17px}#invo .inv .g2>div{padding:8px 10px}#invo .inv .tb{grid-template-columns:20px 1fr 52px 44px 64px;gap:3px;padding:8px 10px;font-size:12px}#invo .inv .tt{padding:8px 10px}#invo .inv .due{margin:8px 10px;font-size:15px}#invo .inv .nt{padding:8px 10px;font-size:12px}#invo .inv .sg{padding:28px 10px 8px;font-size:12px}}
+</style><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600&family=Noto+Serif+Devanagari:wght@700&display=swap"></head><body>
+<header><div class="in"><div class="brand" onclick="go('home')" style="cursor:pointer">चव्हाण ट्रेडर्स<small>CHAVAN TRADERS</small></div>
+<nav id="nav"></nav></div></header>
+<main id="app"></main>
+<footer>© 2026 चव्हाण ट्रेडर्स – Chavan Traders. All rights reserved.</footer>
+<script>
+var TABS=[["home","Home"],["dash","Dashboard"],["pur","Farmer Purchase"],["sal","Client Sale"],["pay","Payments"],["stock","Stock"],["calls","Calls"]];
+var PRODS=["Rice","Soybean","Cashew","Groundnut","Nachni","Other"];
+const IM={"hero": "BASE64_IMAGE_DATA", "p": ["BASE64_IMAGE_DATA", "BASE64_IMAGE_DATA", "BASE64_IMAGE_DATA", "BASE64_IMAGE_DATA", "BASE64_IMAGE_DATA", "BASE64_IMAGE_DATA"]};
+var authed=false;try{authed=sessionStorage.getItem("ct1auth")=="1"}catch(e){}
+var S={pur:[],sal:[],pay:[],calls:[]},tab="home";
+try{var d=localStorage.getItem("ct1");if(d)S=Object.assign(S,JSON.parse(d))}catch(e){}
+function save(){try{localStorage.setItem("ct1",JSON.stringify(S))}catch(e){}}
+function $(i){return document.getElementById(i)}
+function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function R(n){return "₹"+Math.round(n||0).toLocaleString("en-IN")}
+function K(n){return (Math.round(n*100)/100).toLocaleString("en-IN")+" KG"}
+function today(){return new Date().toISOString().slice(0,10)}
+function total(b){return b.items.reduce(function(a,i){return a+i.kg*i.rate},0)-(b.ham||0)}
+function names(k){var o={};S[k].forEach(function(b){o[b.name]=1});return Object.keys(o)}
+function buyAvg(){var a={};S.pur.forEach(function(b){b.items.forEach(function(i){var x=a[i.p]||(a[i.p]={kg:0,amt:0});x.kg+=i.kg;x.amt+=i.kg*i.rate})});return a}
+var WA="https://wa.me/919850815527";
+function nav(){var h;if(authed)h=TABS.map(function(t){return '<button class="'+(t[0]==tab?"on":"")+'" onclick="go(\''+t[0]+'\')">'+(t[0]=="home"?"Public site":t[1])+'</button>'}).join("")+'<button class="s" onclick="logout()">Logout</button>';
+else h='<button class="'+(tab=="home"?"on":"")+'" onclick="go(\'home\')">Home</button><button onclick="sc(\'products\')">Products</button><button onclick="sc(\'about\')">About Us</button><button onclick="sc(\'contact\')">Contact Us</button><a class="btn" style="background:#8b1a2b" target="_blank" rel="noopener" href="'+WA+'">WhatsApp</a><button class="p" style="margin-left:6px" onclick="go(\'login\')">Login</button>';
+$("nav").innerHTML=h}
+function go(t){if(t!="home"&&t!="login"&&!authed)t="login";if(t=="login"&&authed)t="dash";tab=t;nav();render();window.scrollTo(0,0)}
+function sc(id){if(tab!="home"){tab="home";nav();render()}setTimeout(function(){var e=$(id);if(e)e.scrollIntoView({behavior:"smooth"})},30)}
+function logout(){authed=false;try{sessionStorage.removeItem("ct1auth")}catch(e){}go("home")}
+function pw(){try{return localStorage.getItem("ct1pw")}catch(e){return null}}
+async function H(s){if(window.crypto&&crypto.subtle){var b=await crypto.subtle.digest("SHA-256",new TextEncoder().encode("ct:"+s));return Array.from(new Uint8Array(b)).map(function(x){return x.toString(16).padStart(2,"0")}).join("")}return btoa(unescape(encodeURIComponent("ct:"+s)))}
+function lm(m){$("lm").textContent=m}
+async function doLogin(){var a=$("lp").value;if(!pw()){if(a.length<4){lm("Password must be at least 4 characters.");return}if(a!=$("lp2").value){lm("The two passwords do not match.");return}try{localStorage.setItem("ct1pw",await H(a))}catch(e){}}else if(await H(a)!=pw()){lm("Wrong password. Try again.");return}
+authed=true;try{sessionStorage.setItem("ct1auth","1")}catch(e){}go("dash")}
+function resetPw(){$('lm').innerHTML='Owner mobile number: <input id="rm" type="tel" style="margin:6px 0"><button class="p" onclick="resetGo()">Reset password</button>'}
+function resetGo(){var m=$('rm').value.trim();if(m=='9765941078'||m=='9850815527'){try{localStorage.removeItem('ct1pw')}catch(e){}render()}else toast('That number does not match.')}
+function loginHtml(){var first=!pw();return '<div class="lg"><div class="card"><h2>'+(first?"Create owner password":"Owner login")+'</h2><p class="mu">'+(first?"Choose a password for the billing and stock area. You will use it each time you open it.":"Enter your password to open billing, stock and payments.")+'</p><label>Password</label><input id="lp" type="password" autocomplete="current-password" onkeydown="if(event.key==\'Enter\')doLogin()">'+(first?'<label style="margin-top:8px">Confirm password</label><input id="lp2" type="password" onkeydown="if(event.key==\'Enter\')doLogin()">':'')+'<div class="err" id="lm"></div><button class="p" onclick="doLogin()">'+(first?"Create password and open":"Login")+'</button>'+(first?'':' <button class="s" onclick="resetPw()">Forgot password?</button>')+'</div></div>'}
+function homeHtml(){var P=[["भात","Rice"],["सोयाबीन","Soybean"],["काजू बी","Cashew"],["शेंगा","Groundnut"],["नाचणी","Finger Millet (Nachani)"],["इतर धान्ये","Other Grains"]];
+return `<div class="hz"><div class="in hzi"><div class="hzt"><h1>चव्हाण ट्रेडर्स</h1><div class="own">कै. श्री. रमेश कृष्णा चव्हाण</div><p>आमच्याकडे भात, सोयाबीन, काजू बी, शेंगा, नाचणी आणि इतर सर्व प्रकारच्या धान्यांची खरेदी विक्री केली जाईल.</p><div class="ct"><a href="tel:9765941078">📞 9765941078</a><a target="_blank" rel="noopener" href="${WA}">💬 9850815527</a></div><p>📍 मु.पो. उत्तूर, तळेगळ्ळी, ता. आजरा, जि. कोल्हापूर.</p></div><img class="hzimg" src="${IM.hero}" alt="Rice, soybean, cashew, groundnut and nachni in sacks and bowls"></div></div>
+<div class="sec" id="products"><h2>Our Products</h2><p class="mu" style="text-align:center;margin-top:-6px">Quality grains and seeds for a better tomorrow</p><div class="grid">${P.map(function(p,i){return `<div class="card pc"><img src="${IM.p[i]}" alt="${p[1]}"><div>${p[0]}<small>${p[1]}</small></div></div>`}).join("")}</div></div>
+<div class="sec"><div class="g3"><div class="card" id="about"><h2 style="text-align:left">About Chavan Traders</h2><p>Chavan Traders is a trusted name in the trading of agricultural products. We are committed to providing quality grains, seeds and pulses with honesty and reliability, and we build long-term relationships with farmers and clients through fair dealing and excellent service.</p><div class="tr"><span>✔ Quality products</span><span>✔ Trusted business</span><span>✔ Customer satisfaction</span></div></div>
+<div class="card" id="contact"><h2 style="text-align:left">Contact Us</h2><p>📞 <a href="tel:9765941078">9765941078</a> (साहिल चव्हाण)<br>💬 <a target="_blank" rel="noopener" href="${WA}">9850815527</a> (तन्मय चव्हाण)<br>📍 मु.पो. उत्तूर, तळेगळ्ळी, ता. आजरा, जि. कोल्हापूर.</p><a class="btn" target="_blank" rel="noopener" href="${WA}">Chat on WhatsApp</a></div>
+<div class="card"><h2 style="text-align:left">Location</h2><p>Uttur, Tal. Ajra, Dist. Kolhapur, Maharashtra</p><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Uttur+Ajra+Kolhapur">View on Google Maps</a></div></div></div>`}
+function opts(){return PRODS.map(function(p){return "<option>"+p+"</option>"}).join("")}
+function rowHtml(){return '<div class="row"><select class="ip" onchange="oth(this)">'+opts()+'</select><input class="io" placeholder="Type product name" style="display:none"><input class="ig" placeholder="Grade (optional)"><input class="iw" placeholder="Bag weights: 34 38 33 …"><input class="ic" type="number" min="0" step="any" placeholder="Cut KG"><input class="ir" type="number" min="0" step="any" placeholder="₹ per KG"></div>'}
+function addRow(k){$("rows"+k).insertAdjacentHTML("beforeend",rowHtml())}
+function billForm(k){var who=k=="pur"?"Farmer":"Client";
+return '<div class="card"><h2>'+(k=="pur"?"New farmer purchase bill":"New client sale bill")+'</h2><div class="f"><div><label>Date</label><input id="d'+k+'" type="date" value="'+today()+'"></div><div><label>'+who+' name</label><input id="n'+k+'" list="l'+k+'" onchange="fillP(\''+k+'\')"><datalist id="l'+k+'">'+names(k).map(function(n){return "<option>"+esc(n)+"</option>"}).join("")+'</datalist></div><div><label>Mobile</label><input id="m'+k+'" type="tel"></div><div><label>Village / location</label><input id="v'+k+'"></div></div><p class="mu">Type each bag weight in KG with spaces (34 38 33 …), Marathi digits also work. Cut = deduction in KG. Add one product row per grade, each with its own rate.</p><div id="rows'+k+'">'+rowHtml()+'</div><div class="bar"><button class="s" onclick="addRow(\''+k+'\')">+ Add product</button></div><div class="f" style="margin-top:10px"><div><label>Hamali / other cut (₹)</label><input id="h'+k+'" type="number" min="0" value="0"></div><div><label>'+(k=="pur"?"Paid now":"Received now")+' (₹, leave 0 if later)</label><input id="p'+k+'" type="number" min="0" value="0"></div></div><button class="p" onclick="saveBill(\''+k+'\')">Save bill</button></div>'}
+function saveBill(k){var items=[];document.querySelectorAll("#rows"+k+" .row").forEach(function(r){var w=r.querySelector(".iw").value.replace(/[०-९]/g,function(c){return c.charCodeAt(0)-2406}).split(/[\s,+]+/).map(parseFloat).filter(function(x){return x>0}),ct=parseFloat(r.querySelector(".ic").value)||0,rt=parseFloat(r.querySelector(".ir").value),q=w.reduce(function(a,x){return a+x},0)-ct;if(q>0&&rt>=0)items.push({p:(r.querySelector(".ip").value=="Other"&&r.querySelector(".io").value.trim())?r.querySelector(".io").value.trim():r.querySelector(".ip").value,g:r.querySelector(".ig").value.trim(),bags:w,cut:ct,kg:q,rate:rt})});
+var n=$("n"+k).value.trim();if(!n||!items.length){alert("Enter a name and at least one product with quantity and rate.");return}
+S[k].push({id:Date.now(),date:$("d"+k).value,name:n,phone:$("m"+k).value.replace(/\D/g,""),place:$("v"+k).value,items:items,paid:parseFloat($("p"+k).value)||0,ham:parseFloat($("h"+k).value)||0});save();LB={k:k,id:S[k][S[k].length-1].id};render();window.scrollTo(0,0)}
+var CF=null;
+function del(k,id){var key=k+id,bt=window.event&&window.event.target;if(bt&&bt.closest)bt=bt.closest('button');if(CF!=key){CF=key;if(bt){bt.dataset.o=bt.textContent;bt.textContent='Tap again to delete';bt.style.background='#8b1a2b';bt.style.color='#fff'}setTimeout(function(){if(CF==key){CF=null;if(bt&&bt.dataset.o){bt.textContent=bt.dataset.o;bt.style.background='';bt.style.color=''}}},4000);return}CF=null;S[k]=S[k].filter(function(x){return x.id!=id});save();render()}
+function paidOf(k,b){var t=k=="pur"?"farmer":"client";return b.paid+S.pay.filter(function(p){return p.type==t&&p.name==b.name}).reduce(function(a,p){return a+p.amt},0)*0}
+function bal(k){var t=k=="pur"?"farmer":"client",o={};S[k].forEach(function(b){var x=o[b.name]||(o[b.name]={name:b.name,phone:b.phone,place:b.place,bill:0,paid:0,adv:0});x.bill+=total(b);x.paid+=b.paid;if(b.phone)x.phone=b.phone});
+S.pay.filter(function(p){return p.type==t}).forEach(function(p){var x=o[p.name]||(o[p.name]={name:p.name,phone:"",place:"",bill:0,paid:0,adv:0});x.paid+=p.amt;if(p.kind=="Advance")x.adv+=p.amt});
+return Object.keys(o).map(function(n){o[n].due=o[n].bill-o[n].paid;return o[n]})}
+function wa(k,b){var t=total(b),m="*चव्हाण ट्रेडर्स*\n"+(k=="pur"?"Purchase bill":"Sale bill")+" – "+b.date+"\n"+b.name+"\n"+b.items.map(function(i){return i.p+(i.g?" ("+i.g+")":"")+": "+(i.bags?i.bags.join("+")+(i.cut?" −"+i.cut:"")+" = ":"")+i.kg+" KG × ₹"+i.rate+" = "+R(i.kg*i.rate)}).join("\n")+(b.ham?"\nHamali: −"+R(b.ham):"")+"\nTotal: "+R(t)+"\nPaid: "+R(b.paid)+"\nBalance: "+R(t-b.paid)+"\nधन्यवाद!";
+return "https://wa.me/"+(b.phone?(b.phone.length==10?"91"+b.phone:b.phone):"")+"?text="+encodeURIComponent(m)}
+function billList(k){var l=S[k].slice().reverse();if(!l.length)return '<p class="mu">No bills yet. Fill the form above and save your first bill.</p>';
+return '<div class="card tw"><table><tr><th>Date</th><th>Name</th><th>Items</th><th>Total</th><th>Paid</th><th>Due</th><th></th></tr>'+l.map(function(b){return '<tr><td>'+esc(b.date)+'</td><td>'+esc(b.name)+'<div class="mu">'+esc(b.place)+'</div></td><td>'+b.items.map(function(i){return esc(i.p)+(i.g?" ("+esc(i.g)+")":"")+" "+i.kg+"kg"}).join(", ")+'</td><td>'+R(total(b))+'</td><td>'+R(b.paid)+'</td><td>'+R(total(b)-b.paid)+'</td><td><a class="btn" target="_blank" rel="noopener" href="'+wa(k,b)+'">WhatsApp</a> <button class="s" onclick="del(\''+k+'\','+b.id+')">✕</button></td></tr>'}).join("")+'</table></div>'}
+var LB=null;
+function toast(m){var t=document.getElementById('tt');if(!t){t=document.createElement('div');t.id='tt';t.setAttribute('role','status');t.style.cssText='position:fixed;left:12px;right:12px;bottom:calc(16px + env(safe-area-inset-bottom,0px));background:#1d1d1b;color:#fff;padding:12px 14px;border-radius:8px;z-index:20;box-shadow:0 2px 8px #0005';document.body.appendChild(t)}t.textContent=m;t.style.display='block';clearTimeout(t._h);t._h=setTimeout(function(){t.style.display='none'},3500)}
+window.alert=function(m){toast(m)};
+function oth(s){var o=s.parentNode.querySelector('.io');o.style.display=s.value=='Other'?'':'none';if(s.value=='Other')o.focus()}
+function billMsg(k,b){var t=total(b);return '*चव्हाण ट्रेडर्स*\nकै. श्री. रमेश कृष्णा चव्हाण\n'+(k=='pur'?'खरेदी बिल':'विक्री बिल')+' – '+b.date+'\n'+b.name+(b.place?' ('+b.place+')':'')+'\n\n'+b.items.map(function(i){return i.p+(i.g?' ('+i.g+')':'')+': '+(i.bags&&i.bags.length?i.bags.join('+')+(i.cut?' − '+i.cut:'')+' = ':'')+i.kg+' KG × ₹'+i.rate+' = '+R(i.kg*i.rate)}).join('\n')+(b.ham?'\nहमाली: − '+R(b.ham):'')+'\n\nएकूण: '+R(t)+'\n'+(k=='pur'?'दिले: ':'मिळाले: ')+R(b.paid)+'\nबाकी: '+R(t-b.paid)+'\n\nधन्यवाद! 📞 9765941078'}
+function ph(b){var p=(b.phone||'').replace(/\D/g,'');return p.length==10?'91'+p:p}
+function waL(k,b){return 'https://wa.me/'+ph(b)+'?text='+encodeURIComponent(billMsg(k,b))}
+function smsL(k,b){return 'sms:'+(ph(b)?'+'+ph(b):'')+'?&body='+encodeURIComponent(billMsg(k,b))}
+function cp(k,id){var b=S[k].filter(function(x){return x.id==id})[0];try{navigator.clipboard.writeText(billMsg(k,b)).then(function(){alert('Bill text copied.')},function(){alert('Could not copy.')})}catch(e){alert('Could not copy.')}}
+function fillP(k){var n=$('n'+k).value.trim(),l=S[k].filter(function(b){return b.name==n}).pop();if(l){if(!$('m'+k).value)$('m'+k).value=l.phone||'';if(!$('v'+k).value)$('v'+k).value=l.place||''}}
+
+function inWords(n){n=Math.round(n);if(n<=0)return"Zero";var a=["","One","Two","Three","Four","Five","Six","Seven","Eight","Nine","Ten","Eleven","Twelve","Thirteen","Fourteen","Fifteen","Sixteen","Seventeen","Eighteen","Nineteen"],t=["","","Twenty","Thirty","Forty","Fifty","Sixty","Seventy","Eighty","Ninety"];function w(x){return x<20?a[x]:t[Math.floor(x/10)]+(x%10?" "+a[x%10]:"")}function h(x){return(x>99?a[Math.floor(x/100)]+" Hundred"+(x%100?" ":""):"")+(x%100?w(x%100):"")}var o=[[10000000,"Crore"],[100000,"Lakh"],[1000,"Thousand"]],r="";o.forEach(function(p){if(n>=p[0]){r+=h(Math.floor(n/p[0]))+" "+p[1]+" ";n%=p[0]}});if(n)r+=h(n);return r.trim()}
+var MW="शून्य,एक,दोन,तीन,चार,पाच,सहा,सात,आठ,नऊ,दहा,अकरा,बारा,तेरा,चौदा,पंधरा,सोळा,सतरा,अठरा,एकोणीस,वीस,एकवीस,बावीस,तेवीस,चोवीस,पंचवीस,सव्वीस,सत्तावीस,अठ्ठावीस,एकोणतीस,तीस,एकतीस,बत्तीस,तेहतीस,चौतीस,पस्तीस,छत्तीस,सदतीस,अडतीस,एकोणचाळीस,चाळीस,एक्केचाळीस,बेचाळीस,त्रेचाळीस,चौरेचाळीस,पंचेचाळीस,शेहेचाळीस,सत्तेचाळीस,अठ्ठेचाळीस,एकोणपन्नास,पन्नास,एक्कावन्न,बावन्न,त्रेपन्न,चोपन्न,पंचावन्न,छप्पन्न,सत्तावन्न,अठ्ठावन्न,एकोणसाठ,साठ,एकसष्ट,बासष्ट,त्रेसष्ट,चौसष्ट,पासष्ट,सहासष्ट,सदुसष्ट,अडुसष्ट,एकोणसत्तर,सत्तर,एक्काहत्तर,बाहत्तर,त्र्याहत्तर,चौऱ्याहत्तर,पंचाहत्तर,शहात्तर,सत्याहत्तर,अठ्ठ्याहत्तर,एकोणऐंशी,ऐंशी,एक्क्याऐंशी,ब्याऐंशी,त्र्याऐंशी,चौऱ्याऐंशी,पंचाऐंशी,शहाऐंशी,सत्त्याऐंशी,अठ्ठ्याऐंशी,एकोणनव्वद,नव्वद,एक्क्याण्णव,ब्याण्णव,त्र्याण्णव,चौऱ्याण्णव,पंच्याण्णव,शहाण्णव,सत्त्याण्णव,अठ्ठ्याण्णव,नव्व्याण्णव".split(",");
+function mw(n){n=Math.round(n);if(n<=0)return"शून्य";var r=[];[[10000000,"कोटी"],[100000,"लाख"],[1000,"हजार"]].forEach(function(p){if(n>=p[0]){r.push(MW[Math.floor(n/p[0])%100]+" "+p[1]);n%=p[0]}});if(n>=100){var h=Math.floor(n/100);r.push(h==1?(n%100?"एकशे":"शंभर"):MW[h]+"शे");n%=100}if(n)r.push(MW[n]);return r.join(" ")}
+function dmy(d){var p=String(d).split("-");return p.length==3?p[2]+"-"+p[1]+"-"+p[0]:d}
+function invHtml(k,b){var t=total(b),due=t-b.paid,sub=b.items.reduce(function(a,i){return a+i.kg*i.rate},0),wt=b.items.reduce(function(a,i){return a+i.kg},0),pur=k=="pur",who=pur?"शेतकरी":"ग्राहक",no=("0000"+(S[k].findIndex(function(x){return x.id==b.id})+1)).slice(-4);
+return `<div class="inv"><div class="ih"><b>चव्हाण ट्रेडर्स</b><i>कै. श्री. रमेश कृष्णा चव्हाण</i><span>मु.पो. उत्तूर, तळेगळ्ळी, ता. आजरा, जि. कोल्हापूर.</span><span>मो. 9765941078 · 9850815527</span></div>
+<div class="t1"><b>${pur?"खरेदी बिल":"विक्री बिल"}</b><span class="bd${due>0?"":" ok"}">${due>0?"बाकी रक्कम":"पूर्ण भरले"}</span></div>
+<div class="g2"><div><div class="lb">${who}</div><b>${esc(b.name)}</b>${b.place?"<div class='lb'>"+esc(b.place)+"</div>":""}${b.phone?"<div class='lb'>"+esc(b.phone)+"</div>":""}</div><div><div class="lb">बिल तपशील</div><b>बिल क्र. ${no}</b><div>दिनांक ${dmy(esc(b.date))}</div></div></div>
+<div class="tb h"><div>#</div><div>मालाचे नाव</div><div class="r">निव्वळ KG</div><div class="r">भाव ₹</div><div class="r">रक्कम ₹</div></div>
+${b.items.map(function(i,n){var g=i.bags&&i.bags.length?i.bags.reduce(function(a,x){return a+x},0):0;return `<div class="tb rw"><div>${n+1}</div><div><b>${esc(i.p)}${i.g?" ("+esc(i.g)+")":""}</b>${g?"<div class='sm'>"+i.bags.join("+")+" = "+g+"</div>":""}${i.cut?"<div class='sm'>कट − "+i.cut+"</div>":""}</div><div class="r">${i.kg}</div><div class="r">${i.rate}</div><div class="r"><b>${Math.round(i.kg*i.rate).toLocaleString("en-IN")}</b></div></div>`}).join("")}
+<div class="tt"><div class="tl"><span>एकूण वजन (निव्वळ)</span><span>${wt} KG</span></div><div class="tl"><span>एकूण</span><span>${R(sub)}</span></div>${b.ham?`<div class="tl"><span>हमाली</span><span>− ${R(b.ham)}</span></div>`:""}<div class="tl big"><span>निव्वळ देय</span><span>${R(t)}</span></div><div class="tl pd"><span>${pur?"दिले":"मिळाले"}</span><span>${R(b.paid)}</span></div></div>
+<div class="due"><span>बाकी</span><span>${R(due)}</span></div>
+<div class="nt">अक्षरी: रुपये ${mw(t)} फक्त</div><div class="nt">अटी: वजन व भाव ${pur?"शेतकऱ्यास":"ग्राहकास"} मान्य आहेत.${pur?" बाकी रक्कम ठरलेल्या तारखेला दिली जाईल.":""}</div>
+<div class="sg"><div>${who} सही</div><div>चव्हाण ट्रेडर्स</div></div><div class="ft">धन्यवाद! पुन्हा भेट द्या.</div></div>`}
+var LIBP=null;
+function libs(){if(window.html2canvas&&window.jspdf)return Promise.resolve();if(LIBP)return LIBP;function ld(u){return new Promise(function(a,b){var s=document.createElement("script");s.src=u;s.onload=a;s.onerror=b;document.head.appendChild(s)})}LIBP=ld("https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js").then(function(){return ld("https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js")});LIBP.catch(function(){LIBP=null});return LIBP}
+async function pdfBlob(k,b){await libs();var h=document.createElement("div");h.style.cssText="position:fixed;left:-9999px;top:0;width:640px;background:#fff";h.innerHTML=invHtml(k,b);document.body.appendChild(h);try{if(document.fonts&&document.fonts.ready)await document.fonts.ready;var c=await html2canvas(h.firstChild,{scale:2,backgroundColor:"#fff"}),P=new window.jspdf.jsPDF({unit:"mm",format:"a4"}),iw=190,ph=277,pxh=Math.floor(ph*c.width/iw),y=0;while(y<c.height){var hh=Math.min(pxh,c.height-y),sc=document.createElement("canvas");sc.width=c.width;sc.height=hh;sc.getContext("2d").drawImage(c,0,y,c.width,hh,0,0,c.width,hh);if(y>0)P.addPage();P.addImage(sc.toDataURL("image/jpeg",0.92),"JPEG",10,10,iw,hh*iw/c.width);y+=hh}return P.output("blob")}finally{document.body.removeChild(h)}}
+function pdfName(k,b){return "Bill-"+(k=="pur"?"Kharedi":"Vikri")+"-"+String(b.name).replace(/[^\wऀ-ॿ]+/g,"_")+"-"+b.date+".pdf"}
+function dlBlob(bl,n){var a=document.createElement("a");a.href=URL.createObjectURL(bl);a.download=n;document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},4000)}
+async function sendPdf(k,id){var b=S[k].filter(function(x){return x.id==id})[0];if(!b)return;var m=billMsg(k,b),can=false;try{can=!!(navigator.canShare&&navigator.canShare({files:[new File(["x"],"a.pdf",{type:"application/pdf"})]}))}catch(e){}toast("PDF बनवत आहे…");try{var bl=await pdfBlob(k,b),n=pdfName(k,b),f=new File([bl],n,{type:"application/pdf"});if(can){try{await navigator.share({files:[f],title:n})}catch(e){if(!(e&&e.name=="AbortError"))throw e}return}dlBlob(bl,n);toast("PDF download झाला. WhatsApp मध्ये attach करून पाठवा.")}catch(e){toast("PDF बनवता आला नाही. Internet तपासा.")}}
+async function dlPdf(k,id){var b=S[k].filter(function(x){return x.id==id})[0];if(!b)return;toast("PDF बनवत आहे…");try{dlBlob(await pdfBlob(k,b),pdfName(k,b))}catch(e){toast("PDF बनवता आला नाही. Internet तपासा.")}}
+async function sendTxt(k,id){var b=S[k].filter(function(x){return x.id==id})[0];if(!b)return;var m=billMsg(k,b);try{if(navigator.share){await navigator.share({text:m});return}}catch(e){if(e&&e.name=="AbortError")return}try{await navigator.clipboard.writeText(m);toast("Text copy झाला. WhatsApp उघडून paste करा.")}catch(e){}window.open(waL(k,b),"_blank")}
+function showInv(k,id){var b=S[k].filter(function(x){return x.id==id})[0];if(!b)return;var d=document.getElementById("invo");if(!d){d=document.createElement("div");d.id="invo";document.body.appendChild(d)}d.innerHTML='<div class="invb"><button class="p" onclick="sendTxt(\''+k+'\','+b.id+')">WhatsApp Message</button><button class="p" style="background:#8b1a2b" onclick="sendPdf(\''+k+'\','+b.id+')">Send PDF</button><button class="s" onclick="dlPdf(\''+k+'\','+b.id+')">PDF Download</button><button class="s" onclick="closeInv()">Close</button></div>'+invHtml(k,b);d.style.display="block"}
+function closeInv(){var d=document.getElementById("invo");if(d)d.style.display="none"}
+function sendBtns(k,b){var a="'"+k+"',"+b.id;return '<button class="p" onclick="showInv('+a+')">View bill</button><button class="btn" onclick="sendTxt('+a+')">WhatsApp Message</button><button class="btn" style="background:#8b1a2b" onclick="sendPdf('+a+')">Send PDF</button>'}
+function sentBanner(k){if(!LB||LB.k!=k)return '';var b=S[k].filter(function(x){return x.id==LB.id})[0];if(!b)return '';return '<div class="card" style="border-color:var(--g);margin-bottom:12px"><b>Bill saved – '+esc(b.name)+'</b><div class="mu">Total '+R(total(b))+' · Due '+R(total(b)-b.paid)+(b.phone?'':' · No mobile saved, pick the contact in the app')+'</div><div class="bar">'+sendBtns(k,b)+'<button class="s" onclick="LB=null;render()">Done</button></div></div>'}
+function billList(k){var l=S[k].slice().reverse();if(!l.length)return '<p class="mu">No bills yet. Fill the form above and save your first bill.</p>';return l.map(function(b){var t=total(b);return '<div class="card" style="margin-bottom:10px"><div style="display:flex;justify-content:space-between;gap:8px"><b>'+esc(b.name)+'</b><span class="mu">'+esc(b.date)+'</span></div><div class="mu">'+esc(b.place)+(b.phone?' · '+esc(b.phone):'')+'</div><div style="margin:6px 0;font-size:14px">'+b.items.map(function(i){return esc(i.p)+(i.g?' ('+esc(i.g)+')':'')+': '+i.kg+' KG × ₹'+i.rate+' = '+R(i.kg*i.rate)}).join('<br>')+(b.ham?'<br>Hamali: − '+R(b.ham):'')+'</div><div class="grid" style="grid-template-columns:repeat(3,1fr)"><div><div class="mu">Total</div><b>'+R(t)+'</b></div><div><div class="mu">Paid</div><b>'+R(b.paid)+'</b></div><div><div class="mu">Due</div><b class="neg">'+R(t-b.paid)+'</b></div></div><div class="bar">'+sendBtns(k,b)+'<button class="s" onclick="del(\''+k+'\','+b.id+')">Delete</button></div></div>'}).join('')}
+function stock(){var a=buyAvg(),s={};PRODS.forEach(function(p){s[p]={b:0,s:0}});S.pur.forEach(function(b){b.items.forEach(function(i){(s[i.p]=s[i.p]||{b:0,s:0}).b+=i.kg})});S.sal.forEach(function(b){b.items.forEach(function(i){(s[i.p]=s[i.p]||{b:0,s:0}).s+=i.kg})});return s}
+function dash(){var tp=S.pur.reduce(function(a,b){return a+total(b)},0),ts=S.sal.reduce(function(a,b){return a+total(b)},0),av=buyAvg(),pr=0;
+S.sal.forEach(function(b){b.items.forEach(function(i){var x=av[i.p];if(x)pr+=(i.rate-x.amt/x.kg)*i.kg})});
+var fb=bal("pur"),cb=bal("sal"),pay=fb.reduce(function(a,x){return a+Math.max(x.due,0)},0),adv=fb.reduce(function(a,x){return a+Math.max(-x.due,0)},0),rec=cb.reduce(function(a,x){return a+Math.max(x.due,0)},0);
+var c=function(l,v,cl){return '<div class="card"><div class="mu">'+l+'</div><div class="k '+(cl||"")+'">'+v+'</div></div>'};
+return '<div class="in"><h2>Dashboard</h2><div class="grid">'+c("Total purchases",R(tp))+c("Total sales",R(ts))+c("Profit (on goods sold)",R(pr),pr<0?"neg":"")+c("To pay farmers",R(pay))+c("To receive from clients",R(rec))+c("Advance given to farmers",R(adv))+'</div><div class="bar" style="margin-top:16px"><button class="s" onclick="exp()">Download backup</button><label class="btn" style="margin:0;color:#fff">Restore backup<input type="file" accept=".json" style="display:none" onchange="imp(this)"></label></div><p class="mu">Data is saved in this browser only. Download a backup regularly.</p></div>'}
+function exp(){var a=document.createElement("a");a.href="data:application/json;charset=utf-8,"+encodeURIComponent(JSON.stringify(S));a.download="chavan-traders-backup-"+today()+".json";a.click()}
+function imp(i){var f=i.files[0];if(!f)return;var r=new FileReader();r.onload=function(){try{S=Object.assign({pur:[],sal:[],pay:[],calls:[]},JSON.parse(r.result));save();render()}catch(e){alert("This file is not a valid backup.")}};r.readAsText(f)}
+function balTable(k){var l=bal(k);if(!l.length)return '<p class="mu">No balances yet.</p>';return '<div class="tw"><table><tr><th>Name</th><th>Billed</th><th>Paid</th><th>'+(k=="pur"?"Balance (to pay)":"Balance (to receive)")+'</th></tr>'+l.map(function(x){return '<tr><td>'+esc(x.name)+'</td><td>'+R(x.bill)+'</td><td>'+R(x.paid)+'</td><td class="'+(x.due<0?"neg":"")+'">'+(x.due<0?"Advance "+R(-x.due):R(x.due))+'</td></tr>'}).join("")+'</table></div>'}
+function addPay(){var n=$("pn").value.trim(),a=parseFloat($("pa").value);if(!n||!(a>0)){alert("Enter a name and an amount.");return}S.pay.push({id:Date.now(),date:$("pd").value,type:$("pt").value,name:n,amt:a,kind:$("pk").value});save();render()}
+function addCall(){var n=$("cn").value.trim();if(!n){alert("Enter the caller name.");return}S.calls.push({id:Date.now(),date:today(),name:n,phone:$("cm").value,prod:$("cp").value,kg:$("ck").value,loc:$("cl").value});save();render()}
+function render(){var h="";
+if(tab=="home")h=homeHtml();
+else if(tab=="login")h=loginHtml();
+else if(tab=="dash")h=dash();
+else if(tab=="pur"||tab=="sal"){var k=tab;h='<div class="in">'+sentBanner(k)+billForm(k)+'<h2 style="margin-top:20px">Bills</h2>'+billList(k)+'<h2 style="margin-top:20px">'+(k=="pur"?"Farmer balances":"Client balances")+'</h2>'+balTable(k)+'</div>'}
+else if(tab=="pay"){var pl=S.pay.slice().reverse();h='<div class="in"><div class="card"><h2>Record a payment</h2><div class="f"><div><label>Date</label><input id="pd" type="date" value="'+today()+'"></div><div><label>Party</label><select id="pt"><option value="farmer">Farmer (I paid)</option><option value="client">Client (I received)</option></select></div><div><label>Name</label><input id="pn" list="pl"><datalist id="pl">'+names("pur").concat(names("sal")).map(function(n){return "<option>"+esc(n)+"</option>"}).join("")+'</datalist></div><div><label>Amount (₹)</label><input id="pa" type="number" min="0"></div><div><label>Type</label><select id="pk"><option>Payment</option><option>Advance</option></select></div></div><button class="p" onclick="addPay()">Save payment</button></div><h2 style="margin-top:20px">Farmers – balance</h2>'+balTable("pur")+'<h2 style="margin-top:20px">Clients – balance</h2>'+balTable("sal")+'<h2 style="margin-top:20px">Payment history</h2>'+(pl.length?'<div class="tw card"><table><tr><th>Date</th><th>Party</th><th>Name</th><th>Amount</th><th>Type</th><th></th></tr>'+pl.map(function(p){return '<tr><td>'+esc(p.date)+'</td><td>'+p.type+'</td><td>'+esc(p.name)+'</td><td>'+R(p.amt)+'</td><td>'+p.kind+'</td><td><button class="s" onclick="del(\'pay\','+p.id+')">✕</button></td></tr>'}).join("")+'</table></div>':'<p class="mu">No payments recorded yet.</p>')+'</div>'}
+else if(tab=="stock"){var s=stock(),av=buyAvg();h='<div class="in"><h2>Stock</h2><div class="card tw"><table><tr><th>Product</th><th>Bought</th><th>Sold</th><th>In stock</th><th>Avg buy rate/KG</th><th>Total price</th></tr>'+Object.keys(s).map(function(p){var x=s[p],a=av[p];return '<tr><td>'+p+'</td><td>'+K(x.b)+'</td><td>'+K(x.s)+'</td><td class="'+(x.b-x.s<0?"neg":"")+'"><b>'+K(x.b-x.s)+'</b></td><td>'+(a?R(a.amt/a.kg):"–")+'</td><td><b>'+(a?R((x.b-x.s)*a.amt/a.kg):"–")+'</b></td></tr>'}).join("")+'<tr><td colspan="5"><b>Total stock value</b></td><td><b>'+R(Object.keys(s).reduce(function(t,p){var a=av[p];return t+(a?(s[p].b-s[p].s)*a.amt/a.kg:0)},0))+'</b></td></tr></table></div></div>'}
+else{var cl=S.calls.slice().reverse();h='<div class="in"><div class="card"><h2>Log a call</h2><div class="f"><div><label>Who called</label><input id="cn"></div><div><label>Mobile</label><input id="cm" type="tel"></div><div><label>Product</label><select id="cp">'+opts()+'</select></div><div><label>Quantity (KG)</label><input id="ck" type="number" min="0"></div><div><label>Location</label><input id="cl"></div></div><button class="p" onclick="addCall()">Save reminder</button></div><h2 style="margin-top:20px">Call reminders</h2>'+(cl.length?'<div class="card tw"><table><tr><th>Date</th><th>Name</th><th>Product</th><th>KG</th><th>Location</th><th></th></tr>'+cl.map(function(c){return '<tr><td>'+esc(c.date)+'</td><td>'+esc(c.name)+'<div class="mu">'+esc(c.phone)+'</div></td><td>'+esc(c.prod)+'</td><td>'+esc(c.kg)+'</td><td>'+esc(c.loc)+'</td><td><button class="s" onclick="del(\'calls\','+c.id+')">✕</button></td></tr>'}).join("")+'</table></div>':'<p class="mu">No calls logged. Save a caller here so you can see who called, how many KG, and where.</p>')+'</div>'}
+$("app").innerHTML=h}
+nav();render();
+</script></body></html>

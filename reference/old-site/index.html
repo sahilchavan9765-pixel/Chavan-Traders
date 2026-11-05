@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chavan Traders | Business Management</title>
+<style>
+:root{--maroon:#781c2a;--maroon2:#951f35;--gold:#d9a441;--cream:#fbf5e9;--ink:#24232a;--muted:#77727a;--green:#315d3b;--line:#eadfce;--white:#fff}
+*{box-sizing:border-box}body{margin:0;background:#f6f3ee;color:var(--ink);font:15px/1.5 Arial, sans-serif}
+button,input,select,textarea{font:inherit}button{cursor:pointer;border:0;border-radius:9px;padding:10px 14px;background:var(--maroon);color:white;font-weight:600}
+button.secondary{background:#eee6dc;color:var(--ink)}button.green{background:var(--green)}button.danger{background:#b33b43}
+input,select,textarea{width:100%;padding:10px 11px;border:1px solid #d9d1c7;border-radius:8px;background:white;color:var(--ink)}
+label{display:block;font-size:13px;color:#5f5960;margin:0 0 5px;font-weight:600}.field{margin-bottom:12px}
+.topbar{background:#5d1420;color:#fff;padding:8px 22px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:13px}
+header{background:var(--cream);border-bottom:1px solid var(--line);padding:15px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px}.logo{width:48px;height:48px;border-radius:50%;background:var(--maroon);color:#f7d68e;display:grid;place-items:center;font-size:25px}
+.brand h1{font-size:24px;color:var(--maroon);margin:0}.brand small{letter-spacing:2px;font-weight:bold}
+.hero{background:linear-gradient(110deg,#fff4dd,#ead1a3);padding:26px 28px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.hero h2{font-size:clamp(25px,4vw,38px);color:var(--maroon);margin:0 0 5px}.hero p{margin:0;color:#4b3c2e}.hero .grain{font-size:54px}
+.layout{display:grid;grid-template-columns:245px 1fr;min-height:calc(100vh - 190px)}
+.sidebar{background:#fff;border-right:1px solid var(--line);padding:18px 13px}.side-title{font-size:11px;color:#9a8b7d;letter-spacing:1.5px;font-weight:bold;padding:10px}
+.navbtn{width:100%;text-align:left;background:transparent;color:#4d4547;margin:2px 0;padding:11px 12px;font-weight:600;display:flex;gap:10px;align-items:center}.navbtn:hover,.navbtn.active{background:#f6e9e7;color:var(--maroon)}
+main{padding:25px;max-width:1500px;width:100%;margin:auto}.pagehead{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:20px}.pagehead h2{margin:0;font-size:25px}.muted{color:var(--muted);font-size:13px}
+.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:20px}.card,.panel{background:#fff;border:1px solid var(--line);border-radius:13px;padding:17px;box-shadow:0 3px 12px #43220a08}.card .k{color:var(--muted);font-size:13px}.card .v{font-size:25px;font-weight:bold;color:var(--maroon);margin-top:6px}
+.panel{margin-bottom:17px}.panel h3{margin:0 0 14px;font-size:17px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+table{width:100%;border-collapse:collapse;background:#fff}th,td{text-align:left;padding:11px 9px;border-bottom:1px solid #eee7df;font-size:13px}th{background:#faf5ee;color:#665b55}td .action{padding:5px 8px;font-size:12px}
+.tablewrap{overflow:auto}.empty{text-align:center;padding:25px;color:#888}
+.formgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.formgrid .wide{grid-column:1/-1}
+.actions{display:flex;gap:8px;flex-wrap:wrap}.pill{display:inline-block;border-radius:20px;padding:4px 9px;font-size:11px;font-weight:bold}.paid{background:#e2f3e6;color:#28623a}.unpaid{background:#fae5e4;color:#9b2930}.partial{background:#fff0cf;color:#8a5b0b}
+.notice{background:#fff5dd;border:1px solid #f0d79d;padding:11px;border-radius:9px;font-size:13px;color:#674d1c;margin-bottom:15px}
+.login-wrap{min-height:100vh;display:grid;place-items:center;background:linear-gradient(135deg,#5d1420,#9b3b42 55%,#e5c68d);padding:20px}
+.login{width:min(420px,100%);background:#fffaf2;border-radius:18px;padding:30px;box-shadow:0 18px 55px #26070c55}.login h1{color:var(--maroon);margin:0}.login .logo{margin-bottom:12px}
+footer{padding:15px;text-align:center;background:#24452e;color:#fff;font-size:12px}
+.hidden{display:none!important}
+@media(max-width:900px){.layout{grid-template-columns:1fr}.sidebar{display:flex;overflow:auto;gap:4px;padding:8px}.side-title{display:none}.navbtn{white-space:nowrap;width:auto}.cards{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){header{padding:12px}.hero{padding:20px}.hero .grain{display:none}main{padding:15px}.cards{grid-template-columns:1fr 1fr}.grid2,.formgrid{grid-template-columns:1fr}.pagehead{align-items:flex-start;flex-direction:column}.brand h1{font-size:20px}}
+</style>
+</head>
+<body>
+<div id="loginScreen" class="login-wrap">
+ <form class="login" id="loginForm">
+  <div class="logo">🌾</div><h1>चव्हाण ट्रेडर्स</h1><div class="muted" style="letter-spacing:2px;margin-bottom:22px">CHAVAN TRADERS</div>
+  <h2>Business Login</h2><p class="muted">Sign in to your private business dashboard.</p>
+  <div class="field"><label>Username</label><input id="username" value="admin" required></div>
+  <div class="field"><label>Password</label><input id="password" type="password" value="admin123" required></div>
+  <button style="width:100%">Login</button>
+  <p class="muted" style="margin-top:14px">Demo login: admin / admin123</p>
+ </form>
+</div>
+<div id="app" class="hidden">
+ <div class="topbar"><span>☎ 9765941078 &nbsp; | &nbsp; ☎ 9850815527</span><span>Uttur, Tal. Ajara, Dist. Kolhapur</span></div>
+ <header><div class="brand"><div class="logo">🌾</div><div><h1>चव्हाण ट्रेडर्स</h1><small>CHAVAN TRADERS</small></div></div><div class="actions"><span class="muted" id="today"></span><button class="secondary" id="logoutBtn">Logout</button></div></header>
+ <section class="hero"><div><h2>Business Management System</h2><p>Manage purchases, sales, stock, bills and customer records in one place.</p></div><div class="grain">🌾 🫘 🥜</div></section>
+ <div class="layout">
+  <aside class="sidebar">
+   <div class="side-title">MAIN MENU</div>
+   <button class="navbtn active" data-page="dashboard">▦ Dashboard</button>
+   <button class="navbtn" data-page="purchase">＋ Product Buy</button>
+   <button class="navbtn" data-page="sales">↗ Product Sell</button>
+   <button class="navbtn" data-page="stock">▤ Stock / Warehouse</button>
+   <button class="navbtn" data-page="bills">₹ Bills & Payments</button>
+   <button class="navbtn" data-page="customers">♙ Customers</button>
+   <button class="navbtn" data-page="suppliers">♧ Suppliers</button>
+   <button class="navbtn" data-page="expenses">− Expenses</button>
+   <button class="navbtn" data-page="reports">▥ Reports</button>
+  </aside>
+  <main id="content"></main>
+ </div>
+ <footer>© <span id="year"></span> Chavan Traders. Private Business Management System.</footer>
+</div>
+<script>
+const $=s=>document.querySelector(s), money=n=>'₹'+Number(n||0).toLocaleString('en-IN',{maximumFractionDigits:2});
+const keys=['purchases','sales','customers','suppliers','expenses'];
+let db={}; keys.forEach(k=>db[k]=JSON.parse(localStorage.getItem('ct_'+k)||'[]'));
+function save(){keys.forEach(k=>localStorage.setItem('ct_'+k,JSON.stringify(db[k])))}
+function id(){return Date.now()+Math.floor(Math.random()*1000)}
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function stockMap(){let m={};db.purchases.forEach(x=>m[x.product]=(m[x.product]||0)+Number(x.qty));db.sales.forEach(x=>m[x.product]=(m[x.product]||0)-Number(x.qty));return m}
+function allRows(){return [...db.purchases.map(x=>({...x,type:'Purchase'})),...db.sales.map(x=>({...x,type:'Sale'}))].sort((a,b)=>b.id-a.id)}
+function showPage(p){document.querySelectorAll('.navbtn').forEach(b=>b.classList.toggle('active',b.dataset.page===p));let c=$('#content');const title={dashboard:'Dashboard',purchase:'Product Buy / Purchase',sales:'Product Sell / Sales',stock:'Stock / Warehouse',bills:'Bills & Payments',customers:'Customer Contact Details',suppliers:'Supplier Details',expenses:'Business Expenses',reports:'Reports & Analytics'}[p];
+let body='';
+if(p==='dashboard'){
+let pur=db.purchases.reduce((s,x)=>s+ +x.total,0), sal=db.sales.reduce((s,x)=>s+ +x.total,0), pending=allRows().reduce((s,x)=>s+(x.status==='Unpaid'?+x.total:x.status==='Partial'?Math.max(0,+x.total-(+x.paid||0)):0),0), st=Object.values(stockMap()).reduce((a,b)=>a+b,0);
+body=`<div class="cards">${[['Total Purchase',money(pur)],['Total Sales',money(sal)],['Stock Quantity',st.toLocaleString('en-IN')+' kg'],['Pending Payments',money(pending)]].map(a=>`<div class="card"><div class="k">${a[0]}</div><div class="v">${a[1]}</div></div>`).join('')}</div>
+<div class="grid2"><div class="panel"><h3>Quick Actions</h3><div class="actions"><button onclick="showPage('purchase')">＋ Add Purchase</button><button class="green" onclick="showPage('sales')">＋ Add Sale</button><button class="secondary" onclick="showPage('customers')">Add Customer</button></div></div><div class="panel"><h3>Business Overview</h3><p class="muted">Purchases: ${db.purchases.length} &nbsp; Sales: ${db.sales.length}<br>Customers: ${db.customers.length} &nbsp; Suppliers: ${db.suppliers.length}</p></div></div>
+<div class="panel"><h3>Recent Transactions</h3>${transactionTable(allRows().slice(0,6))}</div>`;
+}else if(p==='purchase'||p==='sales'){
+let isP=p==='purchase';body=`<div class="panel"><h3>${isP?'Record a Purchase':'Record a Sale'}</h3><form id="transactionForm" class="formgrid">
+<div class="field"><label>Date</label><input name="date" type="date" value="${new Date().toISOString().slice(0,10)}" required></div>
+<div class="field"><label>Product</label><select name="product" required><option value="">Select product</option>${['Rice / Bhat','Soybean','Cashew','Groundnut / Shenga','Finger Millet / Nachani','Other Grains'].map(x=>`<option>${x}</option>`).join('')}</select></div>
+<div class="field"><label>${isP?'Supplier':'Customer'} name</label><input name="party" required placeholder="Enter name"></div>
+<div class="field"><label>Quantity (kg)</label><input name="qty" type="number" min="0.01" step="0.01" required></div>
+<div class="field"><label>Rate per kg (₹)</label><input name="rate" type="number" min="0" step="0.01" required></div>
+<div class="field"><label>Payment status</label><select name="status"><option>Unpaid</option><option>Paid</option><option>Partial</option></select></div>
+<div class="field"><label>Amount paid (₹)</label><input name="paid" type="number" min="0" step="0.01" value="0"></div>
+<div class="field"><label>Bill / Reference no.</label><input name="bill" placeholder="Optional"></div>
+<div class="field wide"><label>Notes</label><input name="notes" placeholder="Optional details"></div>
+<div class="wide"><button>${isP?'Save Purchase':'Save Sale'}</button></div></form></div><div class="panel"><h3>${isP?'Purchase':'Sales'} History</h3>${transactionTable((isP?db.purchases:db.sales).slice().reverse())}</div>`;
+}else if(p==='stock'){
+let m=stockMap();body=`<div class="notice">Stock is calculated automatically: total purchases minus total sales. Enter every purchase and sale to keep it accurate.</div><div class="panel"><h3>Current Stock</h3><div class="tablewrap"><table><thead><tr><th>Product</th><th>Available Quantity</th><th>Warehouse</th><th>Status</th></tr></thead><tbody>${['Rice / Bhat','Soybean','Cashew','Groundnut / Shenga','Finger Millet / Nachani','Other Grains'].map(x=>`<tr><td>${x}</td><td>${(m[x]||0).toLocaleString('en-IN')} kg</td><td>Main Warehouse</td><td><span class="pill ${(m[x]||0)<=0?'unpaid':'paid'}">${(m[x]||0)<=0?'Out of stock':'In stock'}</span></td></tr>`).join('')}</tbody></table></div></div>`;
+}else if(p==='bills'){body=`<div class="panel"><h3>Payment & Bill Register</h3>${transactionTable(allRows())}</div>`}
+else if(p==='customers'||p==='suppliers'){
+let isC=p==='customers', arr=isC?db.customers:db.suppliers;body=`<div class="panel"><h3>Add ${isC?'Customer':'Supplier'}</h3><form id="contactForm" class="formgrid"><div class="field"><label>Name</label><input name="name" required></div><div class="field"><label>Mobile Number</label><input name="phone" required></div><div class="field"><label>Address</label><input name="address"></div><div class="field"><label>Email</label><input name="email" type="email"></div><div class="field wide"><label>Notes</label><input name="notes"></div><div class="wide"><button>Save ${isC?'Customer':'Supplier'}</button></div></form></div><div class="panel"><h3>Saved ${isC?'Customers':'Suppliers'}</h3>${contactTable(arr)}</div>`;
+}else if(p==='expenses'){body=`<div class="panel"><h3>Add Expense</h3><form id="expenseForm" class="formgrid"><div class="field"><label>Date</label><input name="date" type="date" value="${new Date().toISOString().slice(0,10)}"></div><div class="field"><label>Expense category</label><select name="category"><option>Transport</option><option>Labour</option><option>Warehouse</option><option>Packaging</option><option>Other</option></select></div><div class="field"><label>Amount (₹)</label><input name="amount" type="number" min="0.01" step="0.01" required></div><div class="field"><label>Description</label><input name="description"></div><div><button>Save Expense</button></div></form></div><div class="panel"><h3>Expense History</h3>${db.expenses.length?`<div class="tablewrap"><table><tr><th>Date</th><th>Category</th><th>Description</th><th>Amount</th></tr>${db.expenses.slice().reverse().map(x=>`<tr><td>${esc(x.date)}</td><td>${esc(x.category)}</td><td>${esc(x.description)}</td><td>${money(x.amount)}</td></tr>`).join('')}</table></div>`:'<div class="empty">No expenses recorded.</div>'}</div>`}
+else if(p==='reports'){let pur=db.purchases.reduce((s,x)=>s+ +x.total,0),sal=db.sales.reduce((s,x)=>s+ +x.total,0),exp=db.expenses.reduce((s,x)=>s+ +x.amount,0);body=`<div class="cards">${[['Purchase Value',money(pur)],['Sales Value',money(sal)],['Expenses',money(exp)],['Sales - Purchase - Expenses',money(sal-pur-exp)]].map(a=>`<div class="card"><div class="k">${a[0]}</div><div class="v">${a[1]}</div></div>`).join('')}</div><div class="panel"><h3>Export Data</h3><p class="muted">Download transaction, customer, supplier and expense records as CSV files for Excel.</p><div class="actions"><button onclick="exportCSV('purchases')">Purchases CSV</button><button onclick="exportCSV('sales')">Sales CSV</button><button onclick="exportCSV('customers')">Customers CSV</button><button onclick="exportCSV('suppliers')">Suppliers CSV</button><button onclick="exportCSV('expenses')">Expenses CSV</button></div></div><div class="notice">Figures are calculated from the records entered in this browser.</div>`}
+c.innerHTML=`<div class="pagehead"><div><h2>${title}</h2><div class="muted">Chavan Traders · Private business records</div></div></div>${body}`;
+let tf=$('#transactionForm');if(tf)tf.onsubmit=e=>{e.preventDefault();let f=new FormData(tf),x=Object.fromEntries(f);x.id=id();x.qty=+x.qty;x.rate=+x.rate;x.total=x.qty*x.rate;x.paid=+x.paid;x.type=p;let target=isP?'purchases':'sales';if(!isP&&x.qty>(stockMap()[x.product]||0)){alert('Not enough stock. Available: '+(stockMap()[x.product]||0)+' kg');return}db[target].push(x);save();showPage(p);alert('Record saved successfully.')};
+let cf=$('#contactForm');if(cf)cf.onsubmit=e=>{e.preventDefault();let x=Object.fromEntries(new FormData(cf));x.id=id();db[isC?'customers':'suppliers'].push(x);save();showPage(p);alert('Details saved successfully.')};
+let ef=$('#expenseForm');if(ef)ef.onsubmit=e=>{e.preventDefault();let x=Object.fromEntries(new FormData(ef));x.id=id();db.expenses.push(x);save();showPage(p);alert('Expense saved.')};
+}
+function transactionTable(rows){if(!rows.length)return '<div class="empty">No transactions recorded yet.</div>';return `<div class="tablewrap"><table><thead><tr><th>Date</th><th>Type</th><th>Product</th><th>Party</th><th>Qty (kg)</th><th>Total</th><th>Payment</th></tr></thead><tbody>${rows.map(x=>`<tr><td>${esc(x.date)}</td><td>${x.type||'Transaction'}</td><td>${esc(x.product)}</td><td>${esc(x.party)}</td><td>${x.qty}</td><td>${money(x.total)}</td><td><span class="pill ${x.status==='Paid'?'paid':x.status==='Partial'?'partial':'unpaid'}">${esc(x.status||'')}</span></td></tr>`).join('')}</tbody></table></div>`}
+function contactTable(rows){if(!rows.length)return '<div class="empty">No details saved yet.</div>';return `<div class="tablewrap"><table><tr><th>Name</th><th>Mobile</th><th>Address</th><th>Email</th></tr>${rows.map(x=>`<tr><td>${esc(x.name)}</td><td>${esc(x.phone)}</td><td>${esc(x.address)}</td><td>${esc(x.email)}</td></tr>`).join('')}</table></div>`}
+function exportCSV(k){let rows=db[k];if(!rows.length){alert('No data to export.');return}let cols=Object.keys(rows[0]),csv=[cols.join(','),...rows.map(r=>cols.map(c=>'"'+String(r[c]??'').replace(/"/g,'""')+'"').join(','))].join('\n'),a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));a.download='chavan_traders_'+k+'.csv';a.click();URL.revokeObjectURL(a.href)}
+$('#loginForm').addEventListener('submit',function(e){
+ e.preventDefault();
+ const user=$('#username').value.trim();
+ const pass=$('#password').value;
+ if(user==='admin' && pass==='admin123'){
+   $('#loginScreen').classList.add('hidden');
+   $('#app').classList.remove('hidden');
+   showPage('dashboard');
+ } else {
+   alert('Login details are incorrect. Use username: admin and password: admin123.');
+ }
+});
+$('#logoutBtn').onclick=()=>{ $('#app').classList.add('hidden');$('#loginScreen').classList.remove('hidden');$('#password').value=''};
+document.querySelectorAll('.navbtn').forEach(b=>b.onclick=()=>showPage(b.dataset.page));
+$('#today').textContent=new Date().toLocaleDateString('en-IN',{dateStyle:'medium'});$('#year').textContent=new Date().getFullYear();
+</script>
+</body></html>
